@@ -3,23 +3,23 @@ import { BiMenuAltRight } from "react-icons/bi";
 import logo from "./../public/images/logo1.png";
 const Navbar: React.FC = () => {
   return (
-    <div className="fixed w-full h-[80px] flex justify-between items-center px-6">
+    <div className="w-full h-[80px] flex justify-between items-center px-6">
       {/* logo */}
       <div className=" mt-3 p-3  min-w-max ">
         <Image src={logo} />
       </div>
       {/* menu */}
-      <div className="hidden lg:flex flex-row justify-between">
-        <a href="#" className="p-5 text-h3">
+      <div className="hidden lg:flex flex-row justify-between ">
+        <a href="#" className="p-5 text-h4 hover:underline decoration-primary decoration-2">
           Home
         </a>
-        <a href="#" className="p-5 text-h3">
+        <a href="#" className="p-5 text-h4 hover:underline decoration-primary decoration-2">
           About
         </a>
-        <a href="#" className="p-5 text-h3">
+        <a href="#" className="p-5 text-h4 hover:underline decoration-primary decoration-2">
           Projects
         </a>
-        <a href="#" className="p-5 text-h3">
+        <a href="#" className="p-5 text-h4 hover:underline decoration-primary decoration-2">
           Services
         </a>
       </div>
@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
         <a href="#">Contact</a>
       </div>
       {/* hamburger icon */}
-      <div className="flex lg:hidden transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 duration-300 ">
+      <div className="flex lg:hidden transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 duration-300 cursor-pointer ">
         <BiMenuAltRight size={34} />
       </div>
     </div>
