@@ -1,11 +1,14 @@
 import { FC } from "react";
 import Hero from "../src/components/Hero";
-import Navbar from "../src/components/navbar";
+import Quote from "../src/components/Quote";
+import Services from "../src/components/Services";
+
 const Home: FC = () => {
   return (
     <div>
-      <Navbar />
       <Hero />
+      <Quote />
+      <Services />
     </div>
   );
 };
