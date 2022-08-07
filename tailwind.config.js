@@ -19,6 +19,8 @@ module.exports = {
       bodyTitleSmall: ["18px", "24px"],
       body1: ["16px", "22px"],
       body2: ["14px", "20px"],
+      paragraph: ["2.2rem", "44px"],
+      paraGraphMedium: ["25px", "36px"],
       caption: ["12px", "16px"],
     },
     colors: {
@@ -34,6 +36,7 @@ module.exports = {
       bubblegum: "#ff77e9",
       bermuda: "#78dcca",
       primary: "#1d53ff",
+      paraColor: "#001455",
     },
 
     variants: {
