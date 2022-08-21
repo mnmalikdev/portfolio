@@ -20,7 +20,7 @@ const Navbar: React.FC<IMenuProps> = () => {
       {displayNav ? (
         <div className="w-full h-[80px] flex justify-between items-center px-6">
           {/* logo */}
-          <div className=" mt-3 p-3  min-w-max ">
+          <div className=" mt-3 px-3  ">
             <Image src={logo} />
           </div>
           {/* menu */}
@@ -42,7 +42,7 @@ const Navbar: React.FC<IMenuProps> = () => {
             <a href="#">Contact</a>
           </div>
           {/* hamburger icon */}
-          <div className="flex lg:hidden transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 duration-300 cursor-pointer ">
+          <div className="flex mt-1 lg:hidden transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 duration-300 cursor-pointer ">
             <BiMenuAltRight size={34} onClick={toggleMenu} />
           </div>
         </div>

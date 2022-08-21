@@ -17,9 +17,9 @@ const Services: React.FC = () => {
           {/* div 2 */}
           <div>
             <div className=" flex flex-col lg:flex lg:flex-row ">
-              <div className=" mr-12 ">
+              <div className="lg:mr-12 ">
                 <div className=" text-h3 font-jakarta mb-3 my-6 ">Web Development</div>
-                <div className=" text-body1 text-[#59647b] font-medium">
+                <div className="  text-body1 text-[#59647b] font-medium">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum maxime corrupti sint veritatis, iure tenetur officia quasi nisi,
                   nemo, itaque modi ex at. At nisi hic dignissimos esse, iusto dicta.
                 </div>
