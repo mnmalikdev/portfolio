@@ -5,7 +5,7 @@ const SkillElement: React.FC = () => {
   return (
     // parent div of entire card
     <>
-      <div className=" flex flex-row justify-evenly items-center my-8">
+      <div className=" flex flex-row flex-wrap justify-evenly items-center my-8">
         <div>
           <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height={110} width={110} />
           <div className=" flex justify-center font-jakarta text-bodyTitleBig text-dark"> TypeScript </div>
@@ -24,7 +24,7 @@ const SkillElement: React.FC = () => {
         </div>
       </div>
       {/* row 2 */}
-      <div className=" flex flex-row justify-evenly items-center mt-11">
+      <div className=" flex flex-row flex-wrap justify-evenly items-center mt-11">
         <div>
           <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" height={110} width={110} />
           <div className=" flex justify-center font-jakarta text-bodyTitleBig text-dark"> Next.js </div>
@@ -44,7 +44,7 @@ const SkillElement: React.FC = () => {
       </div>
 
       {/* row 3 */}
-      <div className=" flex flex-row justify-evenly items-center mt-11">
+      <div className=" flex flex-row flex-wrap justify-evenly items-center mt-11">
         <div>
           <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain.svg" height={110} width={110} />
           <div className=" flex justify-center font-jakarta text-bodyTitleBig text-dark"> Nest.js </div>
@@ -64,7 +64,7 @@ const SkillElement: React.FC = () => {
       </div>
 
       {/* row 4 */}
-      <div className=" flex flex-row justify-center gap-80 items-center mt-11">
+      <div className=" flex flex-row flex-wrap justify-center gap-80 items-center mt-11">
         <div>
           <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" height={110} width={110} />
           <div className=" flex justify-center font-jakarta text-bodyTitleBig text-dark"> MongoDB </div>
