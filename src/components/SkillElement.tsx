@@ -1,6 +1,5 @@
 import Image from "next/image";
-import expo from "./../public/images/expo.svg";
-import reactNative from "./../public/images/react-native.svg";
+
 const SkillElement: React.FC = () => {
   return (
     // parent div of entire card
@@ -15,11 +14,11 @@ const SkillElement: React.FC = () => {
           <div className=" flex justify-center font-jakarta text-bodyTitleBig text-dark"> React </div>
         </div>
         <div>
-          <Image src={reactNative} height={110} width={140} />
+          <Image src="/images/react-native.svg" height={110} width={140} />
           <div className=" flex justify-center font-jakarta text-bodyTitleBig text-dark"> React-native </div>
         </div>
         <div>
-          <Image src={expo} height={110} width={110} />
+          <Image src="/images/expo.svg" height={110} width={110} />
           <div className=" flex justify-center font-jakarta text-bodyTitleBig text-dark"> Expo Cli </div>
         </div>
       </div>

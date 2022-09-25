@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { BiMenuAltRight } from "react-icons/bi";
-import logo from "./../public/images/logo1.png";
+// import logo from "./../public/images/logo1.png";
 import Menu from "./Menu";
 
 interface IMenuProps {
@@ -21,7 +21,7 @@ const Navbar: React.FC<IMenuProps> = () => {
         <div className="w-full h-[80px] flex justify-between items-center px-6">
           {/* logo */}
           <div className=" mt-3 px-3  ">
-            <Image src={logo} />
+            <Image src="/images/logo1.png" width={280} height={50} />
           </div>
           {/* menu */}
           <div className="hidden lg:flex flex-row justify-between font-medium">

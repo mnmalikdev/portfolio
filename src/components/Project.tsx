@@ -1,7 +1,4 @@
-import Image from "next/image";
-import Mock1 from "./../public/images/cryptoUI1.png";
-import Mock2 from "./../public/images/cryptoUI6.png";
-import Mock3 from "./../public/images/cryptoUI8.png";
+import Image, { StaticImageData } from "next/image";
 interface detailsObject {
   //title of project
   title: string;
@@ -9,20 +6,24 @@ interface detailsObject {
   description: string;
   //what part i did
   role: string;
+  //Mobile App OR Web App
+  type: string;
   //techstack used
   techStack: string[];
   //mockup of project
+  mockup: string[] | StaticImageData[];
 }
 
-const Project: React.FC<detailsObject> = ({ title, description, role, techStack, ...props }) => {
+const Project: React.FC<detailsObject> = ({ title, description, role, type, techStack, mockup, ...props }) => {
   return (
     <div className=" my-28 ">
       {/* project 1  */}
-      <div className="flex flex-row mx-36">
+      <div className=" flex flex-col md:flex lg:flex-row mx-36">
         {/* section left */}
-        <div className=" flex flex-col w-1/2  ">
+        <div className=" flex flex-col w-full  lg:flex lg:flex-col lg:w-1/2  ">
           <h1 className=" text-h1 ">{title}</h1>
           <p className=" text-body1 w-4/5 my-5 ">{description}</p>
+          <p className=" text-body1 w-4/5 my-5 ">{type}</p>
           <p className=" text-body2 font-semibold">{role}</p>
           <p className=" mt-5 ">
             {techStack.map((el) => {
@@ -35,17 +36,19 @@ const Project: React.FC<detailsObject> = ({ title, description, role, techStack,
           </p>
         </div>
         {/* section right */}
-        <div className=" flex w-3/5 ">
-          <div className=" flex flex-row flex-wrap -my-16 ">
-            <div className=" w-72 translate-y-12 ">
-              <Image src={Mock1} layout="responsive" width={60} height={115} alt="Picture of the author" />
-            </div>
-            <div className=" w-72 translate-y-5">
-              <Image src={Mock2} layout="responsive" width={60} height={115} alt="Picture of the author" />
-            </div>
-            <div className=" w-72  ">
-              <Image src={Mock3} layout="responsive" width={60} height={115} alt="Picture of the author" />
-            </div>
+        <div className=" flex w-4/5 my-9  ">
+          <div className=" flex flex-row w-full md:flex lg:flex-row lg:flex-wrap -my-16 ">
+            {mockup.map((el) => {
+              return (
+                <div className=" w-72  " key={Math.random().toFixed(2)}>
+                  {type === "Mobile-App" ? (
+                    <Image src={el} layout="responsive" width={60} height={115} alt="Picture of the author" />
+                  ) : (
+                    <Image className=" z-10" src={el} layout="fixed" width={550} height={420} alt="Picture of the author" />
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
