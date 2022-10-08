@@ -6,7 +6,7 @@ interface detailsObject {
   description: string;
   //what part i did
   role: string;
-  //Mobile App OR Web App
+  //Mobile App OR Web App or web+mobile
   type: string;
   //techstack used
   techStack: string[];
@@ -42,9 +42,9 @@ const Project: React.FC<detailsObject> = ({ title, description, role, type, tech
               return (
                 <div className=" w-72  " key={Math.random().toFixed(2)}>
                   {type === "Mobile-App" ? (
-                    <Image src={el} layout="responsive" width={60} height={115} alt="Picture of the author" />
+                    <Image src={el} layout="responsive" width={60} height={115} alt="Picture of the author" className="w-full min-w-full" />
                   ) : (
-                    <Image className=" z-10" src={el} layout="fixed" width={550} height={420} alt="Picture of the author" />
+                    <Image className=" z-10" src={el} layout="fixed" width={520} height={490} alt="Picture of the author" />
                   )}
                 </div>
               );

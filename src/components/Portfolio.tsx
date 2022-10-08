@@ -10,6 +10,15 @@ const Portfolio: React.FC = () => {
         </div>{" "}
         <br />
       </div>
+
+      <Project
+        title="Home Gym Partner"
+        description="lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet."
+        role="Full-Stack"
+        type="Web-App"
+        techStack={[" React.js ", "Typescript", "Nest.js", "MySQL", "TypeORM"]}
+        mockup={["/images/gymygUI2.png", "/images/gymygUI1.png"]}
+      />
       <Project
         title="MiCrypto App UI"
         description="lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet."
