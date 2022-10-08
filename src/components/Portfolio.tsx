@@ -43,7 +43,7 @@ const Portfolio: React.FC = () => {
         role="Front-End"
         type="Mobile-App"
         techStack={[" React-Native ", "JavaScript"]}
-        mockup={["/images/movieAppUI2.png", "/images/movieAppUI1.png", "/images/movieAppUI3.png"]}
+        mockup={["/images/MovieAppUI2.png", "/images/MovieAppUI1.png", "/images/MovieAppUI3.png"]}
       />
     </div>
   );

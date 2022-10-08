@@ -44,7 +44,7 @@ const Project: React.FC<detailsObject> = ({ title, description, role, type, tech
                   {type === "Mobile-App" ? (
                     <Image src={el} layout="responsive" width={60} height={115} alt="Picture of the author" className="w-full min-w-full" />
                   ) : (
-                    <Image className=" z-10" src={el} layout="fixed" width={520} height={490} alt="Picture of the author" />
+                    <Image src={el} className=" z-10" layout="fixed" width={520} height={490} alt="Picture of the author" />
                   )}
                 </div>
               );

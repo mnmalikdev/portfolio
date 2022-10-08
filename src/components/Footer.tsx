@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col px-24 py-11 mt-10   ">
-      <div className="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="flex flex-col px-16 py-11 mt-10   ">
+      <div className="grid gap-20 mb-8 sm:grid-cols-2 lg:grid-cols-5">
         <div className="sm:col-span-2">
           <Image src="/images/logo1Copy.png" alt="logo" width={300} height={50} className=" -ml-10" />
 
