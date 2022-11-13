@@ -1,27 +1,9 @@
-import Image from "next/image";
-
 const Footer = () => {
   return (
-    <div className="flex flex-col px-16 py-11 mt-10   ">
-      <div className="grid gap-20 mb-8 sm:grid-cols-2 lg:grid-cols-5">
-        <div className="sm:col-span-2">
-          <Image src="/images/logo1Copy.png" alt="logo" width={300} height={50} className=" -ml-10" />
-
-          <div className="mt-6 lg:max-w-sm tracking-wide ml-2">
-            <p className="text-sm text-gray-800">An experienced software engineer with a demonstrated history of working in the software industry.</p>
-            <p className="mt-4 text-sm text-gray-800">
-              Skilled in JavaScript development, specializing React.js/react-native, JavaScript, TypeScript, Node.js, and Nest.js. Strong engineering
-              professional with a fine eye for UI/UX design.
-            </p>
-            <p className="mt-4 text-sm text-gray-800">
-              Graduated from the COMSATS University, Islamabad with a Bachelors degree in software engineering (BSE)
-            </p>
-          </div>
-        </div>
+    <div className="flex flex-col px-16 py-11 mt-10 w-full  ">
+      <div className="flex flex-col-reverse justify-center items-center gap-7 mb-5  ">
         <div className="space-y-2 text-sm">
-          <p className="text-base font-bold tracking-wide text-gray-900">Contacts</p>
-          <div className="flex">
-            <p className="mr-1 text-gray-800">Phone:</p>
+          <div className="flex justify-center items-center">
             <a
               href="tel:+923425500944"
               aria-label="Our phone"
@@ -31,8 +13,7 @@ const Footer = () => {
               +92 342 55 00 944
             </a>
           </div>
-          <div className="flex">
-            <p className="mr-1 text-gray-800">Email:</p>
+          <div className="flex justify-center items-center">
             <a
               href="mailto:info@lorem.mail"
               aria-label="Our email"
@@ -42,8 +23,7 @@ const Footer = () => {
               mnmalikdev@gmail.com
             </a>
           </div>
-          <div className="flex">
-            <p className="mr-1 text-gray-800">Address:</p>
+          <div className="flex justify-center items-center">
             <a
               href="https://www.google.com/maps"
               target="_blank"
@@ -56,9 +36,8 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div>
-          <span className="text-base font-bold tracking-wide text-gray-900">Social</span>
-          <div className="flex items-center mt-1 space-x-3">
+        <div className="flex flex-col ">
+          <div className="flex flex-row items-center mt-1 space-x-3">
             <a
               href="https://www.linkedin.com/in/nabeelmalik97/"
               className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
@@ -121,3 +100,20 @@ const Footer = () => {
 };
 
 export default Footer;
+
+{
+  /* <div className="sm:col-span-2">
+          <Image src="/images/logo1Copy.png" alt="logo" width={300} height={50} className=" -ml-10" />
+
+          <div className="mt-6 lg:max-w-sm tracking-wide ml-2">
+            <p className="text-sm text-gray-800">An experienced software engineer with a demonstrated history of working in the software industry.</p>
+            <p className="mt-4 text-sm text-gray-800">
+              Skilled in JavaScript development, specializing React.js/react-native, JavaScript, TypeScript, Node.js, and Nest.js. Strong engineering
+              professional with a fine eye for UI/UX design.
+            </p>
+            <p className="mt-4 text-sm text-gray-800">
+              Graduated from the COMSATS University, Islamabad with a Bachelors degree in software engineering (BSE)
+            </p>
+          </div>
+        </div> */
+}
