@@ -1,3 +1,4 @@
+import About from "../src/components/About";
 import Hero from "../src/components/Hero";
 import Portfolio from "../src/components/Portfolio";
 import Quote from "../src/components/Quote";
@@ -8,6 +9,7 @@ const Home: React.FC = () => {
     <div>
       <Hero />
       <Quote />
+      <About />
       <Services />
       <Skills />
       <Portfolio />
