@@ -9,8 +9,8 @@ const Services: React.FC = () => {
         {/* div 1 */}
         <div className=" my-5 ">
           <div className=" text-paraGraphMedium w-full lg:text-paragraphMedium text-paraColor lg:w-4/5  ">
-            Being a hybrid designer and developer means that I have all the reins. This allows me to build sleek websites quickly, well and
-            effectively
+            Being a hybrid designer and developer means that I have all the reins. This allows me to build sleek webs and mobile applications quickly,
+            well and effectively
           </div>
         </div>
         <div>

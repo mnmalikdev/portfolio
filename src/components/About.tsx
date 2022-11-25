@@ -5,18 +5,21 @@ const About = () => {
         {/* left column */}
         <div className=" text-h2 font-bold ">About Me</div>
         <div className=" my-5 ">
-          <div className=" text-paraGraphMedium w-full lg:text-paraGraphMedium tracking-wide text-paraColor lg:w-4/5  ">
-            Skilled in JavaScript development, specializing in Web-App and Mobile-App development . Strong engineering professional with a diverse
-            tech-stack , a fine eye for UI/UX design , and quality experience. Graduated from the COMSATS University, Pakistan with a Bachelors degree
-            in software engineering (BSE). Currently working in a startup as a MERN stack developer.
+          <div className=" text-paraGraphMedium w-full lg:text-paraGraphMedium tracking-wide text-paraColor lg:w-2/3 pr-5 ">
+            I am a professional software developer with a focus on building javascript web and mobile applications.
+            <br />
+            <br /> I have worked with small and medium businesses to help them scale their business and solve their problems. I have experience
+            developing efficient techical solutions for companies of all sizes.
+            <br />
+            <br /> I am passionate about helping my clients grow their business by providing them with the tools they need to succeed.
           </div>
         </div>
       </div>
-      <div className=" my-5 ">
-        <div className=" flex flex-col gap-12 mt-12 ">
+      <div className="  w-2/6">
+        <div className=" flex flex-col justify-center gap-12 mt-28 ">
           {/* first row with 2 */}
-          <div className=" flex flex-row gap-20">
-            <div className=" flex flex-col ">
+          <div className=" flex flex-row gap-32">
+            <div className=" flex flex-col  ">
               <div className=" text-h2"> 24 </div>
               <div className=" text-paraGraphMedium"> years young</div>
             </div>
@@ -27,7 +30,7 @@ const About = () => {
             </div>
           </div>
           {/* second row with 2 */}
-          <div className=" flex flex-row gap-16">
+          <div className=" flex flex-row gap-24">
             <div className=" flex flex-col ">
               <div className=" text-h2"> 7 </div>
               <div className=" text-paraGraphMedium"> projects done</div>
