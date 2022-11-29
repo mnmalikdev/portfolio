@@ -5,6 +5,15 @@ module.exports = {
     container: {
       center: true,
     },
+    screens: {
+      xxs: "0px",
+      xs: "250px",
+      s: "350px",
+      sm: "768px",
+      md: "1024px",
+      lg: "1200px",
+      xl: "1369px",
+    },
     fontFamily: {
       jakarta: ["Plus Jakarta Sans"],
       poppins: ["Poppins"],
