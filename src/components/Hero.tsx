@@ -3,7 +3,7 @@ import { BsCheckLg } from "react-icons/bs";
 const Hero: React.FC = () => {
   const services = ["Web", "Android", "IoS", "Cross-Platform"];
   return (
-    <div className="  flex flex-col-reverse justify-center items-center lg:flex lg:flex-row  px-16 pt-28 mb-52 ">
+    <div className="  flex flex-col-reverse justify-center items-center lg:flex lg:flex-row  px-16 pt-36  ">
       <div className=" flex flex-col w-full">
         {/* text section */}
         <div className=" text-h3 w-full xl:text-h1  xl:text-left font-semibold justify-center">
