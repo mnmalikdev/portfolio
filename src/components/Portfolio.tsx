@@ -18,15 +18,7 @@ const Portfolio: React.FC = () => {
         role="Full-Stack"
         type="Web-App"
         techStack={[" React.js ", "Typescript", "Nest.js", "MySQL", "TypeORM"]}
-        mockup={["/images/gymygUI2.png", "/images/gymygUI1.png"]}
-      />
-      <Project
-        title="MiCrypto App UI"
-        description="lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet."
-        role="Front-End"
-        type="Mobile-App"
-        techStack={[" React-Native ", "Typescript"]}
-        mockup={["/images/cryptoUI1.png", "/images/cryptoUI6.png", "/images/cryptoUI8.png"]}
+        mockup={["/images/gymygUI4.png", "/images/gymygUI5.png"]}
       />
 
       <Project
@@ -35,7 +27,16 @@ const Portfolio: React.FC = () => {
         role="Full-Stack"
         type="Web-App"
         techStack={[" React.js ", "JavaScript", "Firebase"]}
-        mockup={["/images/DisneyUI1.png", "/images/DisneyUI4.png"]}
+        mockup={["/images/DisneyUI3.png", "/images/DisneyUI4.png"]}
+      />
+
+      <Project
+        title="MiCrypto App UI"
+        description="lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet."
+        role="Front-End"
+        type="Mobile-App"
+        techStack={[" React-Native ", "Typescript"]}
+        mockup={["/images/cryptoUI1.png", "/images/cryptoUI6.png"]}
       />
 
       <Project
@@ -44,7 +45,7 @@ const Portfolio: React.FC = () => {
         role="Front-End"
         type="Mobile-App"
         techStack={[" React-Native ", "JavaScript"]}
-        mockup={["/images/MovieAppUI2.png", "/images/MovieAppUI1.png", "/images/MovieAppUI3.png"]}
+        mockup={["/images/MovieAppUI1.png", "/images/MovieAppUI3.png"]}
       />
     </div>
   );
