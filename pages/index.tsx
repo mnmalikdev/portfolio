@@ -10,6 +10,7 @@ const Home: React.FC = () => {
       <Hero />
       <Quote />
       <About />
+
       <Services />
       <Skills />
       <Portfolio />

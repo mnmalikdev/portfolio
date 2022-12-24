@@ -2,14 +2,15 @@ import Project from "./Project";
 
 const Portfolio: React.FC = () => {
   return (
-    <div className=" my-28 ">
-      <div className=" flex flex-col text-h2 font-bold justify-center items-center ">
-        <div className="font-bold font-jakarta text-h2">What I Have Built So Far...</div>
-        <div className="font-jakarta text-body2">
+    <div className="  my-28 ">
+      <div className=" flex flex-col  font-bold justify-center items-center ">
+        <div className="font-bold text-h3 md:text-h2 font-jakarta">What I Have Built So Far...</div>
+        <div className="font-jakarta text-body2 text-center px-4">
           Take a look at the fron-end , back-end and full-stack projects i have built or worked on for work and fun !
         </div>{" "}
         <br />
       </div>
+      {/* projects div */}
 
       <Project
         title="Home Gym Partner"

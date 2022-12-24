@@ -3,10 +3,10 @@ import { BsCheckLg } from "react-icons/bs";
 const Hero: React.FC = () => {
   const services = ["Web", "Android", "IoS", "Cross-Platform"];
   return (
-    <div className=" md:flex flex-row md:h-auto w-full sm:flex-row px-16 pt-28 mb-52 ">
-      <div className=" flex flex-col">
+    <div className="  flex flex-col-reverse justify-center items-center lg:flex lg:flex-row  px-16 pt-28 mb-52 ">
+      <div className=" flex flex-col w-full">
         {/* text section */}
-        <div className=" text-h3 md:text-h1 text-left font-semibold justify-center">
+        <div className=" text-h3 w-full xl:text-h1  xl:text-left font-semibold justify-center">
           Sleek <span className=" underline decoration-primary">Web</span> <span> & </span>
           <span className=" underline decoration-primary ">Mobile Apps</span>,
           <br /> from design to development,
@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
           </ul>
         </div>
         {/* Butoon-CTA */}
-        <div className=" flex-col">
+        <div className=" flex-row">
           {/* about me button */}
           <div className="inline-flex shadow my-3 ">
             <a
@@ -45,14 +45,8 @@ const Hero: React.FC = () => {
         </div>
       </div>
       {/* IMAGE SECTION */}
-      <div className=" flex justify-center  w-1/2 ">
-        <img
-          src="/images/hero-image.png"
-          width={550}
-          height={250}
-          alt="Picture of the author"
-          className="  border-2 border-primary rounded-full -m-4  "
-        />
+      <div className="flex justify-center items-center  lg:w-2/3 mb-16">
+        <img src="/images/portfolio-main.png" alt="Picture of the author" width={550} className=" border-2 rounded-lg border-primary  -m-4" />
       </div>
     </div>
   );
