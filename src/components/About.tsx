@@ -21,8 +21,8 @@ const About = () => {
             <br />
             <br />
             <p>
-              If you're in need of a new web application, a mobile app, or simply looking to improve your current software infrastructure, I am ready
-              to provide you with the expertise and guidance you need to succeed. I am confident that my skills and experience make me a strong
+              If you&rsquo;re in need of a new web application, a mobile app, or simply looking to improve your current software infrastructure, I am
+              ready to provide you with the expertise and guidance you need to succeed. I am confident that my skills and experience make me a strong
               candidate for your next project and I look forward to the opportunity to work with you.
             </p>
           </div>
