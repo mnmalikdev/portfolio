@@ -14,18 +14,16 @@ const About = () => {
             <br />
             <br />
             <p>
-              {" "}
               In my current role, I have helped small and medium businesses optimize their processes and scale their operations through the
               implementation of custom software solutions. My passion for technology and problem-solving drives me to stay up-to-date on the latest
-              industry trends and techniques, ensuring that my clients always receive the best possible service.{" "}
+              industry trends and techniques, ensuring that my clients always receive the best possible service.
             </p>
             <br />
             <br />
             <p>
-              {" "}
               If you're in need of a new web application, a mobile app, or simply looking to improve your current software infrastructure, I am ready
               to provide you with the expertise and guidance you need to succeed. I am confident that my skills and experience make me a strong
-              candidate for your next project and I look forward to the opportunity to work with you.{" "}
+              candidate for your next project and I look forward to the opportunity to work with you.
             </p>
           </div>
         </div>
