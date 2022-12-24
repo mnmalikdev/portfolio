@@ -46,7 +46,7 @@ const Hero: React.FC = () => {
       </div>
       {/* IMAGE SECTION */}
       <div className="flex justify-center items-center  lg:w-2/3 mb-16">
-        <img src="/images/portfolio-main.png" alt="Picture of the author" width={550} className=" border-2 rounded-lg border-primary  -m-4" />
+        <img src="/images/portfolio-main1.png" alt="Picture of the author" width={390} className=" border-2 rounded-lg border-primary  -m-4" />
       </div>
     </div>
   );
