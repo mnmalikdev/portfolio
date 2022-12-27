@@ -1,52 +1,68 @@
+import { FC } from "react";
 import { BiRightArrowAlt } from "react-icons/bi";
 import { BsCheckLg } from "react-icons/bs";
-const Hero: React.FC = () => {
-  const services = ["Web", "Android", "IoS", "Cross-Platform"];
+
+const Hero: FC = () => {
+  const services = ["Web", "Android", "iOS", "Cross Platform"];
+
   return (
-    <div className="  flex flex-col-reverse justify-center items-center lg:flex lg:flex-row  px-16 pt-36  ">
-      <div className=" flex flex-col w-full">
-        {/* text section */}
-        <div className=" text-h3 w-full xl:text-h1  xl:text-left font-semibold justify-center">
-          Sleek <span className=" underline decoration-primary">Web</span> <span> & </span>
-          <span className=" underline decoration-primary ">Mobile Apps</span>,
-          <br /> from design to development,
-          <br /> that fits your needs.
-          <ul className="text-li my-4">
-            {services.map((service, index) => {
-              return (
-                <div key={index * 2} className="flex flex-row justify-start content-center ">
-                  <BsCheckLg size={15} color={"#1d53ff"} className="mx-2 mt-2 block" />
-                  <li key={index} className="text-li text-[#59647b] font-medium">
-                    {service}
-                  </li>
-                </div>
-              );
-            })}
-          </ul>
+    <div className="lg:flex lg:flex-row lg:py-36 lg:px-16 lg:justify-between lg:items-center">
+      <div className="flex justify-center mt-4 mb-8 lg:hidden">
+        <img
+          src="/images/portfolio-main1.png"
+          alt="Picture of the author"
+          className="border-2 rounded-lg border-primary w-[250px]"
+        />
+      </div>
+
+      <div>
+        <div className="mb-8 font-semibold text-center text-h3 lg:text-left lg:max-w-screen-lg lg:text-h1">
+          Sleek <span className="underline decoration-primary">Web</span> &{" "}
+          <span className="underline decoration-primary">Mobile Apps</span>,
+          from design to development, that fits your needs.
         </div>
-        {/* Butoon-CTA */}
-        <div className=" flex-row">
-          {/* about me button */}
-          <div className="inline-flex shadow my-3 ">
+
+        <ul className="grid grid-cols-2 grid-rows-2 mb-8 lg:grid-rows-none lg:grid-cols-none">
+          {services.map((service) => {
+            return (
+              <div key={service} className="flex items-center">
+                <BsCheckLg color="#1D53FF" className="mr-2" />
+                <li className="font-medium md:text-li text-[#59647B]">
+                  {service}
+                </li>
+              </div>
+            );
+          })}
+        </ul>
+
+        <div className="md:flex md:justify-center lg:flex-none lg:justify-start">
+          <div className="flex justify-center mb-8 md:mb-0 md:mr-8">
             <a
               href="#"
-              className=" w-full inline-flex items-center justify-center px-4 py-4 border-2 border-primary text-base font-semibold rounded-xl text-primary bg-white transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
+              className="p-[16px] border-2 border-primary font-bold text-primary hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500"
             >
               check out my work
             </a>
           </div>
-          {/* contact button */}
-          <a
-            href="#"
-            className=" mx-3 inline-flex items-center justify-center text-[16px] px-4 py-4 text-base font-semibold rounded-md text-[#59647b] bg-white transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
-          >
-            get in touch <BiRightArrowAlt size={22} />
-          </a>
+
+          <div className="flex items-center justify-center">
+            <a
+              className="text-[16px] font-semibold text-[#59647B] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
+              href="#"
+            >
+              get in touch
+            </a>
+            <BiRightArrowAlt size={22} color="#59647B" />
+          </div>
         </div>
       </div>
-      {/* IMAGE SECTION */}
-      <div className="flex justify-center items-center  lg:w-2/3 mb-16">
-        <img src="/images/portfolio-main1.png" alt="Picture of the author" width={390} className=" border-2 rounded-lg border-primary  -m-4" />
+
+      <div className="justify-center hidden mt-4 mb-8 lg:flex">
+        <img
+          src="/images/portfolio-main1.png"
+          alt="Picture of the author"
+          className="border-2 rounded-lg border-primary w-[390px]"
+        />
       </div>
     </div>
   );

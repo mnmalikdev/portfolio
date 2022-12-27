@@ -1,52 +1,65 @@
+import { FC, useMemo } from "react";
 import Project from "./Project";
 
-const Portfolio: React.FC = () => {
+const Portfolio: FC = () => {
+  const projects = useMemo(
+    () => [
+      {
+        title: "Home Gym Partner",
+        images: [
+          "images/home-gym-partner/img1.png",
+          "images/home-gym-partner/img2.png",
+        ],
+        description:
+          "lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.",
+        type: "Web App",
+        role: "Full-Stack",
+        skills: ["React.js", "TypeScript", "Nest.js", "MySQL", "TypeORM"],
+      },
+      {
+        title: "Disney UI Clone",
+        images: ["images/disney/img1.png", "images/disney/img2.png"],
+        description:
+          "I built a clone of Disney Hotstar website. the project was fun and it's great way to learn while improving my coding skills. I used React.js and firebase in order to build my own version of Disney Hotstart website. This is definitely not something new, but I wanted to share it with everyone as a great way to learn and enhance creativity.",
+        type: "Web App",
+        role: "Full-Stack",
+        skills: ["React.js", "JavaScript", "Firebase"],
+      },
+      {
+        title: "MiCryoto App UI",
+        images: ["images/mi-crypto/img1.png", "images/mi-crypto/img2.png"],
+        description:
+          "lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.",
+        type: "Mobile App",
+        role: "Front end",
+        skills: ["React Native", "TypeScript"],
+      },
+      {
+        title: "Netflix App UI",
+        images: ["images/netflix/img1.png", "images/netflix/img2.png"],
+        description:
+          "lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.",
+        type: "Mobile App",
+        role: "Front end",
+        skills: ["React Native", "JavaScript"],
+      },
+    ],
+    []
+  );
+
   return (
-    <div className="  my-28 ">
-      <div className=" flex flex-col  font-bold justify-center items-center ">
-        <div className="font-bold text-h3 md:text-h2 font-jakarta">What I Have Built So Far...</div>
-        <div className="font-jakarta text-body2 text-center px-4">
-          Take a look at the fron-end , back-end and full-stack projects i have built or worked on for work and fun !
-        </div>{" "}
-        <br />
+    <div className="lg:px-16">
+      <div className="font-bold text-center text-h3 lg:text-h2">
+        What I Have Built So Far
       </div>
-      {/* projects div */}
+      <div className="mb-10 text-center text-body2">
+        Take a look at the frontend, backend and full-stack projects I have
+        built or worked on for work and fun!
+      </div>
 
-      <Project
-        title="Home Gym Partner"
-        description="lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet."
-        role="Full-Stack"
-        type="Web-App"
-        techStack={[" React.js ", "Typescript", "Nest.js", "MySQL", "TypeORM"]}
-        mockup={["/images/gymygUI4.png", "/images/gymygUI5.png"]}
-      />
-
-      <Project
-        title="Disney UI Clone"
-        description="I built a clone of Disney Hotstar website. the project was fun and it's great way to learn while improving my coding skills. I used React.js and firebase in order to build my own version of Disney Hotstart website. This is definitely not something new, but I wanted to share it with everyone as a great way to learn and enhance creativity."
-        role="Full-Stack"
-        type="Web-App"
-        techStack={[" React.js ", "JavaScript", "Firebase"]}
-        mockup={["/images/DisneyUI3.png", "/images/DisneyUI4.png"]}
-      />
-
-      <Project
-        title="MiCrypto App UI"
-        description="lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet."
-        role="Front-End"
-        type="Mobile-App"
-        techStack={[" React-Native ", "Typescript"]}
-        mockup={["/images/cryptoUI1.png", "/images/cryptoUI6.png"]}
-      />
-
-      <Project
-        title="Netflix mobile UI"
-        description="lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet."
-        role="Front-End"
-        type="Mobile-App"
-        techStack={[" React-Native ", "JavaScript"]}
-        mockup={["/images/MovieAppUI1.png", "/images/MovieAppUI3.png"]}
-      />
+      {projects.map((project) => {
+        return <Project key={project.title} {...project} />;
+      })}
     </div>
   );
 };

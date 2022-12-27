@@ -6,8 +6,12 @@ import "../styles/globals.css";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Navbar />
-      <Component {...pageProps} />
+      <div className="px-3">
+        <Navbar />
+        <div className="px-1">
+          <Component {...pageProps} />
+        </div>
+      </div>
       <Footer />
     </>
   );
