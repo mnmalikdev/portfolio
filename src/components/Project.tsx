@@ -1,55 +1,65 @@
-import Image, { StaticImageData } from "next/image";
-interface detailsObject {
-  //title of project
+import { FC } from "react";
+
+interface ProjectProps {
   title: string;
-  //description of project
+  images: Array<string>;
   description: string;
-  //what part i did
   role: string;
-  //Mobile App OR Web App or web+mobile
   type: string;
-  //techstack used
-  techStack: string[];
-  //mockup of project
-  mockup: string[] | StaticImageData[];
+  skills: Array<string>;
 }
 
-const Project: React.FC<detailsObject> = ({ title, description, role, type, techStack, mockup, ...props }) => {
+const Project: FC<ProjectProps> = ({
+  title,
+  images,
+  description,
+  type,
+  role,
+  skills,
+}) => {
   return (
-    <div className=" my-28 ">
-      {/* project 1  */}
-      <div className=" flex flex-col-reverse md:flex lg:flex-row lg:mx-36">
-        {/* section left */}
-        <div className=" flex flex-col  px-9 lg:flex lg:flex-col w-full  ">
-          <h1 className=" text-h1 ">{title}</h1>
-          <p className=" text-body1 w-4/5 my-5 ">{description}</p>
-          <p className=" text-body1 w-4/5 my-5 ">{type}</p>
-          <p className=" text-body2 font-semibold">{role}</p>
-          <p className=" mt-5 ">
-            {techStack.map((el) => {
-              return (
-                <span key={Math.random().toFixed(1)} className=" pr-4 pt-4">
-                  {el}
-                </span>
-              );
-            })}
-          </p>
+    <div className="my-5 lg:flex lg:flex-row-reverse lg:my-[50px] lg:justify-between">
+      <div className="mb-4">
+        <div className="mb-4 text-center text-h3 lg:hidden">{title}</div>
+        <div
+          className={`flex flex-col md:flex-row lg:flex-${
+            type === "Mobile App" ? "row" : "col"
+          } md:justify-center md:space-y-0 md:space-x-4 lg:space-x-0 lg:space-y-${
+            type === "Mobile App" ? "0" : "4"
+          } items-center space-y-${type === "Mobile App" ? "0" : "4"}`}
+        >
+          {images.map((image) => {
+            return (
+              <img
+                key={image}
+                src={image}
+                alt={title}
+                className={`w-[250px] lg:w-[${
+                  type === "Mobile App" ? "200" : "400"
+                }px]`}
+              />
+            );
+          })}
         </div>
-        {/* section right */}
-        <div className=" flex justify-center items-center w-full my-20  ">
-          <div className=" flex flex-row w-full md:flex lg:flex-row lg:flex-wrap -my-16 ">
-            {mockup.map((el) => {
-              return (
-                <div className=" w-1/2  " key={Math.random().toFixed(2)}>
-                  {type === "Mobile-App" ? (
-                    <Image src={el} layout="responsive" width={60} height={115} alt="Picture of the author" className="w-full min-w-full" />
-                  ) : (
-                    <Image src={el} className=" w-full min-w-full" layout="responsive" width={800} height={800} alt="Picture of the author" />
-                  )}
-                </div>
-              );
-            })}
-          </div>
+      </div>
+
+      <div className="lg:max-w-3xl">
+        <div className="hidden mb-2 lg:flex text-h1">{title}</div>
+        <div className="mb-4 text-justify">{description}</div>
+
+        <div className="grid grid-cols-2 mb-5">
+          <div className="font-semibold">Type</div>
+          <div className="font-semibold">Tech Stack</div>
+
+          <div>{type}</div>
+          <div>{role}</div>
+        </div>
+
+        <div className="font-semibold text-center md:text-left">Skills</div>
+        <div className="grid grid-cols-2 md:grid-cols-1">
+          {skills.map((skill) => {
+            return <div key={skill}>{skill}</div>;
+          })}
         </div>
       </div>
     </div>
