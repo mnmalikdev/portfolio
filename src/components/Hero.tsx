@@ -1,39 +1,42 @@
-import { FC } from "react";
+import { FC, useMemo } from "react";
 import { BiRightArrowAlt } from "react-icons/bi";
 import { BsCheckLg } from "react-icons/bs";
 
 const Hero: FC = () => {
-  const services = ["Web", "Android", "iOS", "Cross Platform"];
+  const services = useMemo(
+    () => ["Web", "Android", "iOS", "Cross Platform"],
+    []
+  );
 
   return (
-    <div className="lg:flex lg:flex-row lg:py-36 lg:px-16 lg:justify-between lg:items-center">
-      <div className="flex justify-center mt-4 mb-8 lg:hidden">
+    <div className="lg:flex lg:flex-row-reverse lg:px-16 lg:py-36 lg:justify-between lg:items-center">
+      <div className="flex justify-center">
         <img
           src="/images/portfolio-main1.png"
           alt="Picture of the author"
-          className="border-2 rounded-lg border-primary w-[250px]"
+          className="border-2 rounded-lg border-primary w-[250px] lg:mb-0 lg:w-[390px] mb-8"
         />
       </div>
 
       <div>
-        <div className="mb-8 font-semibold text-center text-h3 lg:text-left lg:max-w-screen-lg lg:text-h1">
+        <div className="mb-8 font-semibold text-center text-h3 lg:text-left lg:text-h1 lg:max-w-screen-lg">
           Sleek <span className="underline decoration-primary">Web</span> &{" "}
           <span className="underline decoration-primary">Mobile Apps</span>,
-          from design to development, that fits your needs.
+          from design to development, that fits your needs
         </div>
 
-        <ul className="grid grid-cols-2 grid-rows-2 mb-8 lg:grid-rows-none lg:grid-cols-none">
+        <div className="grid grid-cols-2 grid-rows-2 mb-8 lg:grid-rows-none lg:grid-cols-none">
           {services.map((service) => {
             return (
               <div key={service} className="flex items-center">
                 <BsCheckLg color="#1D53FF" className="mr-2" />
-                <li className="font-medium md:text-li text-[#59647B]">
+                <div className="font-medium md:text-li text-[#59647B]">
                   {service}
-                </li>
+                </div>
               </div>
             );
           })}
-        </ul>
+        </div>
 
         <div className="md:flex md:justify-center lg:flex-none lg:justify-start">
           <div className="flex justify-center mb-8 md:mb-0 md:mr-8">
@@ -55,14 +58,6 @@ const Hero: FC = () => {
             <BiRightArrowAlt size={22} color="#59647B" />
           </div>
         </div>
-      </div>
-
-      <div className="justify-center hidden mt-4 mb-8 lg:flex">
-        <img
-          src="/images/portfolio-main1.png"
-          alt="Picture of the author"
-          className="border-2 rounded-lg border-primary w-[390px]"
-        />
       </div>
     </div>
   );
