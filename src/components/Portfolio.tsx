@@ -6,10 +6,7 @@ const Portfolio: FC = () => {
     () => [
       {
         title: "Home Gym Partner",
-        images: [
-          "images/home-gym-partner/img1.png",
-          "images/home-gym-partner/img2.png",
-        ],
+        images: ["images/home-gym-partner/img1.png", "images/home-gym-partner/img2.png"],
         description:
           "lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.",
         type: "Web App",
@@ -48,13 +45,10 @@ const Portfolio: FC = () => {
   );
 
   return (
-    <div className="lg:px-16">
-      <div className="font-bold text-center text-h3 lg:text-h2">
-        What I Have Built So Far
-      </div>
+    <div className="lg:px-16 lg:py-12 lg:mt-12">
+      <div className="font-bold text-center text-h3 lg:text-h2">What I Have Built So Far</div>
       <div className="mb-10 text-center text-body2">
-        Take a look at the frontend, backend and full-stack projects I have
-        built or worked on for work and fun!
+        Take a look at the frontend, backend and full-stack projects I have built or worked on for work and fun!
       </div>
 
       {projects.map((project) => {

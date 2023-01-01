@@ -1,9 +1,5 @@
 module.exports = {
-  purge: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./src/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/flowbite/**/*.{js,ts,jsx,tsx}",
-  ],
+  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./src/**/*.{js,ts,jsx,tsx}", "./node_modules/flowbite/**/*.{js,ts,jsx,tsx}"],
   theme: {
     container: {
       center: true,
@@ -32,7 +28,7 @@ module.exports = {
       poppins: ["Poppins"],
     },
     fontSize: {
-      h1: ["4rem", "4.6rem"],
+      h1: ["4.2rem", "4.6rem"],
       h2: ["3rem", "60px"],
       h3: ["2.2rem", "50px"],
       h4: ["18px", "27px"],
