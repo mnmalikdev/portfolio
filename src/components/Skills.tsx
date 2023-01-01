@@ -8,6 +8,7 @@ import {
   Github,
   Javascript,
   Monogdb,
+  MySQL,
   Nestjs,
   Nextjs,
   Nodejs,
@@ -35,16 +36,17 @@ const Skills: FC = () => {
       { component: <Github />, name: "Github" },
       { component: <Monogdb />, name: "MongoDB" },
       { component: <Firebase />, name: "Firebase" },
+      { component: <MySQL />, name: "MySQL" },
       { component: <Figma />, name: "Figma" },
     ],
     []
   );
 
   return (
-    <div className="mb-10">
+    <div className="mb-10 ">
       <div className="mb-4 font-bold text-center text-h2">My Tech Stack</div>
 
-      <div className="grid grid-cols-2 gap-8 md:grid-cols-3">
+      <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
         {techs.map((tech) => {
           return <Skill key={tech.name} {...tech} />;
         })}
