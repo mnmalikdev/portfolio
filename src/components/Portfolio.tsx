@@ -1,56 +1,12 @@
 import { FC, useMemo } from "react";
 import Project from "./Project";
 
-import {
-  AWS,
-  Expo,
-  Express,
-  Figma,
-  Firebase,
-  Git,
-  Github,
-  Javascript,
-  Monogdb,
-  MySQL,
-  Nestjs,
-  Nextjs,
-  Nodejs,
-  React,
-  ReactNative,
-  Tailwindcss,
-  TypeORM,
-  Typescript,
-} from "../icons";
+import { AWS, Firebase, Javascript, MySQL, Nestjs, React, ReactNative, TypeORM, Typescript } from "../icons";
 
 const Portfolio: FC = () => {
-  const techs = useMemo(
-    () => [
-      { component: <Typescript />, name: "TypeScript" },
-      { component: <React />, name: "React" },
-      { component: <ReactNative />, name: "React Native" },
-      { component: <Expo />, name: "Expo" },
-      { component: <Nextjs />, name: "Nextjs" },
-      { component: <Javascript />, name: "JavaScript" },
-      { component: <Tailwindcss />, name: "Tailwind CSS" },
-      { component: <Nodejs />, name: "Node.js" },
-      { component: <Nestjs />, name: "Nest.js" },
-      { component: <Express />, name: "Express.js" },
-      { component: <Git />, name: "Git" },
-      { component: <Github />, name: "Github" },
-      { component: <Monogdb />, name: "MongoDB" },
-      { component: <Firebase />, name: "Firebase" },
-      { component: <MySQL />, name: "MySQL" },
-      { component: <Figma />, name: "Figma" },
-      { component: <TypeORM />, name: "TypeORM" },
-      { component: <AWS />, name: "AWS" },
-    ],
-    []
-  );
-
   const projects = useMemo(
     () => [
       {
-        projectKey: "project-1",
         title: "Home Gym Partner",
         images: ["images/home-gym-partner/img1.png", "images/home-gym-partner/img2.png"],
         description:
@@ -59,43 +15,44 @@ const Portfolio: FC = () => {
         role: "Full-Stack",
         // skills: ["React.js", "TypeScript", "Nest.js", "MySQL", "TypeORM"],
         skills: [
-          <React width={40} />,
-          <Typescript width={40} />,
-          <Nestjs width={40} />,
-          <MySQL width={40} />,
-          <TypeORM width={40} />,
-          <AWS width={90} />,
+          <React key={Math.random().toFixed(3)} width={40} />,
+          <Typescript key={Math.random().toFixed(3)} width={40} />,
+          <Nestjs key={Math.random().toFixed(3)} width={40} />,
+          <MySQL key={Math.random().toFixed(3)} width={40} />,
+          <TypeORM key={Math.random().toFixed(3)} width={40} />,
+          <AWS key={Math.random().toFixed(3)} width={90} />,
         ],
       },
       {
-        projectKey: "project-2",
         title: "Disney UI Clone",
         images: ["images/disney/img1.png", "images/disney/img2.png"],
         description:
           "I built a clone of Disney Hotstar website. the project was fun and it's great way to learn while improving my coding skills. I used React.js and firebase in order to build my own version of Disney Hotstart website. This is definitely not something new, but I wanted to share it with everyone as a great way to learn and enhance creativity.",
         type: "Web App",
         role: "Full-Stack",
-        skills: [<React width={40} />, <Javascript width={40} />, <Firebase width={40} />],
+        skills: [
+          <React key={Math.random().toFixed(3)} width={40} />,
+          <Javascript key={Math.random().toFixed(3)} width={40} />,
+          <Firebase key={Math.random().toFixed(3)} width={40} />,
+        ],
       },
       {
-        projectKey: "project-3",
         title: "MiCryoto App UI",
         images: ["images/mi-crypto/img1.png", "images/mi-crypto/img2.png"],
         description:
           "lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.",
         type: "Mobile App",
         role: "Front end",
-        skills: [<ReactNative width={55} />, <Typescript width={40} />],
+        skills: [<ReactNative key={Math.random().toFixed(3)} width={55} />, <Typescript key={Math.random().toFixed(3)} width={40} />],
       },
       {
-        projectKey: "project-4",
         title: "Netflix App UI",
         images: ["images/netflix/img1.png", "images/netflix/img2.png"],
         description:
           "lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.lorem ipsum dolor sit amet.",
         type: "Mobile App",
         role: "Front end",
-        skills: [<ReactNative width={55} />, <Javascript width={40} />],
+        skills: [<ReactNative key={Math.random().toFixed(3)} width={55} />, <Javascript key={Math.random().toFixed(3)} width={40} />],
       },
     ],
     []
@@ -109,7 +66,7 @@ const Portfolio: FC = () => {
       </div>
 
       {projects.map((project) => {
-        return <Project key={project.projectKey} {...project} />;
+        return <Project key={project.title} {...project} />;
       })}
     </div>
   );
