@@ -13,6 +13,7 @@ export * from "./Nodejs";
 export * from "./React";
 export * from "./ReactNative";
 export * from "./Tailwindcss";
+export * from "./TypeORM";
 export * from "./Typescript";
 export interface IconProps {
   width?: number;
