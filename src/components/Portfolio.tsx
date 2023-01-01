@@ -2,6 +2,7 @@ import { FC, useMemo } from "react";
 import Project from "./Project";
 
 import {
+  AWS,
   Expo,
   Express,
   Figma,
@@ -41,6 +42,7 @@ const Portfolio: FC = () => {
       { component: <MySQL />, name: "MySQL" },
       { component: <Figma />, name: "Figma" },
       { component: <TypeORM />, name: "TypeORM" },
+      { component: <AWS />, name: "AWS" },
     ],
     []
   );
@@ -48,6 +50,7 @@ const Portfolio: FC = () => {
   const projects = useMemo(
     () => [
       {
+        projectKey: "project-1",
         title: "Home Gym Partner",
         images: ["images/home-gym-partner/img1.png", "images/home-gym-partner/img2.png"],
         description:
@@ -55,9 +58,17 @@ const Portfolio: FC = () => {
         type: "Web App",
         role: "Full-Stack",
         // skills: ["React.js", "TypeScript", "Nest.js", "MySQL", "TypeORM"],
-        skills: [<React width={40} />, <Typescript width={40} />, <Nestjs width={40} />, <MySQL width={40} />, <TypeORM width={40} />],
+        skills: [
+          <React width={40} />,
+          <Typescript width={40} />,
+          <Nestjs width={40} />,
+          <MySQL width={40} />,
+          <TypeORM width={40} />,
+          <AWS width={90} />,
+        ],
       },
       {
+        projectKey: "project-2",
         title: "Disney UI Clone",
         images: ["images/disney/img1.png", "images/disney/img2.png"],
         description:
@@ -67,6 +78,7 @@ const Portfolio: FC = () => {
         skills: [<React width={40} />, <Javascript width={40} />, <Firebase width={40} />],
       },
       {
+        projectKey: "project-3",
         title: "MiCryoto App UI",
         images: ["images/mi-crypto/img1.png", "images/mi-crypto/img2.png"],
         description:
@@ -76,6 +88,7 @@ const Portfolio: FC = () => {
         skills: [<ReactNative width={55} />, <Typescript width={40} />],
       },
       {
+        projectKey: "project-4",
         title: "Netflix App UI",
         images: ["images/netflix/img1.png", "images/netflix/img2.png"],
         description:
@@ -96,7 +109,7 @@ const Portfolio: FC = () => {
       </div>
 
       {projects.map((project) => {
-        return <Project key={project.title} {...project} />;
+        return <Project key={project.projectKey} {...project} />;
       })}
     </div>
   );

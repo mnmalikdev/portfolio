@@ -1,3 +1,4 @@
+export * from "./AWS";
 export * from "./Expo";
 export * from "./Express";
 export * from "./Figma";

@@ -92,8 +92,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center pt-5 pb-10 border-t lg:flex-row">
-        <p className="text-sm text-gray-600 font-bold inline-block ">© Copyright 2022 mnmalikdev All rights reserved.</p>
+      <div className="flex flex-col justify-center items-center pt-5 pb-10 border-t gap-4 lg:flex-row">
+        <p className="text-sm text-gray-600 font-bold inline-block ">© Copyright 2022 </p> <p>mnmalikdev </p> <p>All rights reserved.</p>
       </div>
     </div>
   );

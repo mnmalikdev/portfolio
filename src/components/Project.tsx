@@ -15,7 +15,7 @@ const Project: FC<ProjectProps> = ({ title, images, description, type, role, ski
       <div className="mb-4 lg:max-w-lg ">
         <div className="mb-4 text-center text-h3 lg:hidden">{title}</div>
         <div
-          className={`flex flex-col md:flex-row  lg:flex-${
+          className={` mt-11 flex flex-col md:flex-row  lg:flex-${
             type === "Mobile App" ? "row" : "col"
           } md:justify-center md:space-y-0 md:space-x-4 lg:space-x-0 lg:space-y-${type === "Mobile App" ? "0" : "4"} items-center space-y-${
             type === "Mobile App" ? "0" : "4"
@@ -32,15 +32,15 @@ const Project: FC<ProjectProps> = ({ title, images, description, type, role, ski
         <div className="mb-4 text-justify lg:w-4/5 xl:w-full">{description}</div>
 
         <div className="grid grid-cols-2 mb-5">
-          <div className="font-semibold">Type</div>
-          <div className="font-semibold">Tech Stack</div>
+          <div className="font-semibold mb-2">Type</div>
+          <div className="font-semibold mb-2">Tech Stack</div>
 
           <div>{type}</div>
           <div>{role}</div>
         </div>
 
-        <div className="font-semibold text-center md:text-left">Skills</div>
-        <div className="grid grid-cols-5 ">
+        <div className="font-semibold text-left mb-2">Skills</div>
+        <div className="grid grid-cols-3 gap-4 ">
           {skills.map((skill) => {
             return <div key={skill}>{skill}</div>;
           })}
