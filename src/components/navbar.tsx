@@ -1,49 +1,31 @@
-import { FC, useState } from "react";
+import { FC, useContext } from "react";
 import { BiMenuAltRight } from "react-icons/bi";
+import MenuContext from "../context/displayMenu.context";
+
 import Menu from "./Menu";
 
-interface IMenuProps {
-  toggleMenu?: () => void;
-}
-
-const Navbar: FC<IMenuProps> = () => {
-  const [displayNav, setDisplayNav] = useState<boolean>(true); //local state for menu
-
-  const toggleMenu = () => {
-    setDisplayNav(!displayNav);
-  };
-
+const Navbar: FC = () => {
+  const { displayMenu, toggleDisplayMenu } = useContext(MenuContext);
+  console.log("menu state", displayMenu);
   return (
     <>
-      {displayNav ? (
-        <div className="flex items-center justify-center h-[80px] lg:h-auto">
+      {displayMenu === false ? (
+        <div className="flex items-center justify-center h-[80px] lg:h-auto px-3">
           <div className="flex flex-1 lg:flex-none">
             <img src="/images/logo1.png" alt="logo" />
           </div>
 
           <div className="hidden lg:flex lg:flex-1 lg:justify-center">
-            <a
-              href="#"
-              className="p-5 text-h4 hover:underline decoration-primary decoration-2"
-            >
+            <a href="#" className="p-5 text-h4 hover:underline decoration-primary decoration-2">
               Home
             </a>
-            <a
-              href="#"
-              className="p-5 text-h4 hover:underline decoration-primary decoration-2"
-            >
+            <a href="#" className="p-5 text-h4 hover:underline decoration-primary decoration-2">
               About
             </a>
-            <a
-              href="#"
-              className="p-5 text-h4 hover:underline decoration-primary decoration-2"
-            >
+            <a href="#" className="p-5 text-h4 hover:underline decoration-primary decoration-2">
               Projects
             </a>
-            <a
-              href="#"
-              className="p-5 text-h4 hover:underline decoration-primary decoration-2"
-            >
+            <a href="#" className="p-5 text-h4 hover:underline decoration-primary decoration-2">
               Services
             </a>
           </div>
@@ -54,12 +36,17 @@ const Navbar: FC<IMenuProps> = () => {
 
           <div className="lg:hidden">
             <div className="ml-[12px] transition duration-300 ease-in-out cursor-pointer hover:-translate-y-1 hover:scale-100">
-              <BiMenuAltRight size={34} onClick={toggleMenu} />
+              <BiMenuAltRight
+                size={34}
+                onClick={() => {
+                  toggleDisplayMenu();
+                }}
+              />
             </div>
           </div>
         </div>
       ) : (
-        <Menu toggleMenu={toggleMenu} />
+        <Menu />
       )}
     </>
   );
