@@ -22,7 +22,7 @@ const Project: FC<ProjectProps> = ({ title, images, description, type, role, ski
           }`}
         >
           {images.map((image, idx) => {
-            return <img key={idx} src={image} alt={title} className={`w-[350px] lg:w-[${type === "Mobile App" ? "200" : "400"}px]`} height="auto" />;
+            return <img key={idx} src={image} alt={title} className={`w-[300px] lg:w-[${type === "Mobile App" ? "200" : "400"}px]`} height="auto" />;
           })}
         </div>
       </div>
