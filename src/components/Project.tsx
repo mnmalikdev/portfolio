@@ -21,8 +21,8 @@ const Project: FC<ProjectProps> = ({ title, images, description, type, role, ski
             type === "Mobile App" ? "0" : "4"
           }`}
         >
-          {images.map((image) => {
-            return <img key={image} src={image} alt={title} className={`w-[250px] lg:w-[${type === "Mobile App" ? "200" : "400"}px]`} />;
+          {images.map((image, idx) => {
+            return <img key={idx} src={image} alt={title} className={`w-[350px] lg:w-[${type === "Mobile App" ? "200" : "400"}px]`} height="auto" />;
           })}
         </div>
       </div>
@@ -41,8 +41,8 @@ const Project: FC<ProjectProps> = ({ title, images, description, type, role, ski
 
         <div className="font-semibold text-left mb-2">Skills</div>
         <div className="grid grid-cols-3 gap-4 ">
-          {skills.map((skill) => {
-            return <div key={skill}>{skill}</div>;
+          {skills.map((skill, idx) => {
+            return <div key={idx}>{skill}</div>;
           })}
         </div>
       </div>

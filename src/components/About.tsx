@@ -1,10 +1,11 @@
-import { FC } from "react";
+import { FC, useRef } from "react";
 
 const About: FC = () => {
+  const aboutRef = useRef<HTMLDivElement>(null);
   return (
     <div className="my-[100px] mb-10 pr-6">
       <div className="mb-4 font-bold text-center text-h2">About Me</div>
-      <div className="container text-justify text-paraColor md:text-paraGraphMedium">
+      <div className="container text-justify text-paraColor md:text-paraGraphMedium" ref={aboutRef} id="about">
         <p>
           As a software engineer with expertise in MERN stack development, I have a strong track record of building efficient and scalable web and
           mobile applications for businesses of all sizes. With experience working with a wide range of clients, I have a proven ability to deliver

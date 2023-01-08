@@ -6,7 +6,7 @@ const Hero: FC = () => {
   const services = useMemo(() => ["Web", "Android", "iOS", "Cross Platform"], []);
 
   return (
-    <div className=" py-12 lg:flex lg:flex-row-reverse lg:px-16 lg:py-36 lg:justify-between lg:items-center">
+    <div className=" py-12 lg:flex lg:flex-row-reverse lg:px-16 lg:py-36 lg:justify-between lg:items-center" id="home">
       <div className="flex justify-center lg:w-3/5 ">
         <img
           src="/images/portfolio-main1.png"

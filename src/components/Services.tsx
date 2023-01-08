@@ -29,7 +29,7 @@ const Services: FC = () => {
   );
 
   return (
-    <div className="mb-10 px-3 md:pr-7  ">
+    <div className="mb-10 px-3 md:pr-7 " id="services">
       <div className="mb-4 font-bold text-center text-h2 ">Services</div>
       <div className="flex mb-6 text-justify text-paraColor md:text-paraGraphMedium lg:justify-center">
         <div className="lg:max-w-4xl">

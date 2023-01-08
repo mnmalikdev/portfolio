@@ -44,7 +44,9 @@ const Skills: FC = () => {
 
   return (
     <div className="mb-10 ">
-      <div className="mb-4 font-bold text-center text-h2">My Tech Stack</div>
+      <div className="mb-4 font-bold text-center text-h2" id="tech">
+        My Tech Stack
+      </div>
 
       <div className="grid grid-cols-2 gap-8 md:grid-cols-4 my-16">
         {techs.map((tech) => {
